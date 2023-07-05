@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#titulo {
+  text-align: center;
+  padding-top: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card-img-top {
+  height: auto;
+  width: 30rem;
+}
+
+main {
+  font-family: "Montserrat", sans-serif;
+  background-color: #2b3055;
+  color: white;
+}
+
+.sub-part {
+  text-align: center;
+}
+
+.nom-part {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
