@@ -34,7 +34,7 @@ function modificar(){
         imagen: i
     };
 
-    let url = 'http://127.0.0.1:5000/jugadores/'+id;
+    let url = 'https://rominabenito.pythonanywhere.com/jugadores/'+id;
     let options = {
         body: JSON.stringify(jugador),
         method: 'PUT',

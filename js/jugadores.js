@@ -4,7 +4,7 @@ createApp({
     data(){
         return{
             jugadores: [],
-            url: 'http://127.0.0.1:5000/jugadores',
+            url: 'https://rominabenito.pythonanywhere.com/jugadores',
             cargando: true,
             error: false
         }

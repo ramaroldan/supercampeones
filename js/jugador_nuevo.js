@@ -14,7 +14,7 @@ function guardar(){
         imagen: i
     };
 
-    let url = 'http://127.0.0.1:5000/jugadores'
+    let url = 'https://rominabenito.pythonanywhere.com/jugadores'
     let options = {
         body: JSON.stringify(jugador),
         method: 'POST',
