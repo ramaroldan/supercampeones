@@ -76,14 +76,8 @@
                       />
                     </td>
                     <td>
-                      <a class="btn btn-primary" href="jugador_editar.html"
-                        >Editar</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-danger"
-                        v-on:click="eliminar(j.id)"
-                      >
+                      <a class="btn btn-primary" :href="'producto_editar.html?id='+j.id+'&nombre='+j.nombre+'&edad='+j.edad+'&altura='+j.altura+'&posicion='+j.posicion+'&imagen='+j.imagen">Editar</a>
+                      <button type="button" class="btn btn-danger" v-on:click="eliminar(p.id)">Eliminar</button>
                         Eliminar
                       </button>
                     </td>
