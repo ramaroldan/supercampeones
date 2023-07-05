@@ -15,6 +15,16 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/jumbotron.css" rel="stylesheet" />
+    <link href="bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -26,7 +36,7 @@
           Jugadores
         </h1>
         <section v-if="error">
-          <p style="color:white">
+          <p style="color: white">
             Lo sentimos, no podemos mostrarte los datos solicitados en este
             momento
           </p>
@@ -47,7 +57,7 @@
               >Agregar jugador</a
             >
 
-            <div class="table-responsive" style="margin-top: 1rem">
+            <!--<div class="table-responsive" style="margin-top: 1rem;">
               <table class="table table-bordered">
                 <thead style="color: white">
                   <tr>
@@ -82,6 +92,48 @@
                   </tr>
                 </tbody>
               </table>
+            </div>-->
+
+            <div class="row">
+              <div
+                class="container col-sm-3"
+                style="width: 100%; display: flex;flex-wrap: wrap; justify-content: space-between; margin-top: 1rem;"
+              >
+                <div
+                  class="card"
+                  style="width: 16rem; margin-bottom: 1.5rem; margin-left: 0.4rem; background-color: ghostwhite"
+                  v-for="j in jugadores" 
+                >
+                  <img
+                    class="card-img-top"
+                    :src="j.imagen"
+                    :alt="j.nombre"
+                    style="width: 100%;height: 13rem;"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">{{j.nombre}}</h4>
+                    <p class="card-text">
+                      Edad: {{j.edad}},<br />
+                      Altura: {{j.altura}},<br />
+                      Posición: {{j.posicion}}
+                    </p>
+                    <a
+                      style="margin-left: 2rem; margin-top: 1.5rem"
+                      class="btn btn-primary"
+                      :href="'jugador_editar.html?id='+j.id+'&nombre='+j.nombre+'&edad='+j.edad+'&altura='+j.altura+'&posicion='+j.posicion+'&imagen='+j.imagen"
+                      >Editar</a
+                    >
+                    <button
+                      style="margin-left: 1rem; margin-top: 1.5rem"
+                      type="button"
+                      class="btn btn-danger"
+                      v-on:click="eliminar(j.id)"
+                    >
+                      Eliminar
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </section>
